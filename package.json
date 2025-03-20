@@ -15,12 +15,9 @@
     "module",
     "reusable"
   ],
-  "author": "Your Name",
+  "author": "Rahul",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yourusername/my-module/issues"
-  },
-  "homepage": "https://github.com/yourusername/my-module#readme",
+  "homepage": "https://github.com/9xRahul/shared-models.git",
   "dependencies": {
     "mongoose": "^8.12.1"
   }
