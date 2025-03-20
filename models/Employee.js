@@ -1,3 +1,4 @@
+const { number } = require("joi");
 const mongoose = require("mongoose");
 
 const employeeSchema = new mongoose.Schema({
@@ -14,15 +15,25 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  address: String,
-  email: String,
-  mobile: Number,
+  address: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+  mobile: {
+    type: Number,
+  },
   mobileIsVerified: {
     type: Boolean,
     default: false,
   },
-  emergencyNumber: Number,
-  bloodGroup: String,
+  emergencyNumber: {
+    type: Number,
+  },
+  bloodGroup: {
+    type: String,
+  },
   profilePic: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "ProfilePic",
@@ -30,4 +41,5 @@ const employeeSchema = new mongoose.Schema({
 });
 
 const Employee = mongoose.model("Employee", employeeSchema);
+
 module.exports = Employee;
